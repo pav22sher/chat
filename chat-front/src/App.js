@@ -1,8 +1,8 @@
+import Chat from "./component/Chat";
+
 function App() {
   return (
-    <div className="App">
-      Hello world!
-    </div>
+    <Chat />
   );
 }
 

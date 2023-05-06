@@ -13,8 +13,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     /**
-     * Регистрация конечных точек STOMP,
-     * сопоставив каждую из них определенному URL
+     * Регистрация конечных точек STOMP
      */
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
@@ -24,12 +23,12 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     }
 
     /**
-     *  Настройка параметров брокера сообщений
+     * Настройка параметров брокера сообщений
      */
     @Override
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.setApplicationDestinationPrefixes("/app")
                 .setUserDestinationPrefix("/user")
-                .enableSimpleBroker("/chatroom", "/user");
+                .enableSimpleBroker("/public", "/user");
     }
 }
