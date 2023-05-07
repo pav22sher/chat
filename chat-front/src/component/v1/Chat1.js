@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import {over} from 'stompjs';
 import SockJS from 'sockjs-client';
-import './Chat.css'
+import './Chat1.css'
 
 let stompClient = null;
-const Chat = () => {
+const Chat1 = () => {
     const [privateChats, setPrivateChats] = useState(new Map());
     const [publicChats, setPublicChats] = useState([]);
     const [tab, setTab] = useState("CHATROOM");
@@ -184,4 +184,4 @@ const Chat = () => {
     )
 }
 
-export default Chat
+export default Chat1
